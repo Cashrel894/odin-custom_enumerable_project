@@ -44,6 +44,14 @@ module Enumerable
     end
     count
   end
+
+  def my_map
+    mapped = []
+    my_each do |item|
+      mapped.push yield item
+    end
+    mapped
+  end
 end
 
 # You will first have to define my_each
