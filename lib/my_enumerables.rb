@@ -52,6 +52,14 @@ module Enumerable
     end
     mapped
   end
+
+  def my_inject(initial_val)
+    res = initial_val
+    my_each do |item|
+      res = yield res, item
+    end
+    res
+  end
 end
 
 # You will first have to define my_each
