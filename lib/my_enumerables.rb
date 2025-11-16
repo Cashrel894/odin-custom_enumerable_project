@@ -7,6 +7,14 @@ module Enumerable
       idx += 1
     end
   end
+
+  def my_select
+    ret = []
+    my_each do |item|
+      ret.push item if yield item
+    end
+    ret
+  end
 end
 
 # You will first have to define my_each
